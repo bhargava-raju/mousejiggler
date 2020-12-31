@@ -38,6 +38,7 @@ namespace ArkaneSystems.MouseJiggle
             this.nifMin = new System.Windows.Forms.NotifyIcon(this.components);
             this.trkTime = new System.Windows.Forms.TrackBar();
             this.lblTime = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             ((System.ComponentModel.ISupportInitialize)(this.trkTime)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,9 +52,9 @@ namespace ArkaneSystems.MouseJiggle
             this.cbEnabled.AutoSize = true;
             this.cbEnabled.Location = new System.Drawing.Point(13, 13);
             this.cbEnabled.Name = "cbEnabled";
-            this.cbEnabled.Size = new System.Drawing.Size(92, 17);
+            this.cbEnabled.Size = new System.Drawing.Size(65, 17);
             this.cbEnabled.TabIndex = 0;
-            this.cbEnabled.Text = "Enable jiggle?";
+            this.cbEnabled.Text = "Enable?";
             this.cbEnabled.UseVisualStyleBackColor = true;
             this.cbEnabled.CheckedChanged += new System.EventHandler(this.cbEnabled_CheckedChanged);
             // 
@@ -72,9 +73,9 @@ namespace ArkaneSystems.MouseJiggle
             this.cbZenJiggle.AutoSize = true;
             this.cbZenJiggle.Location = new System.Drawing.Point(25, 36);
             this.cbZenJiggle.Name = "cbZenJiggle";
-            this.cbZenJiggle.Size = new System.Drawing.Size(78, 17);
+            this.cbZenJiggle.Size = new System.Drawing.Size(51, 17);
             this.cbZenJiggle.TabIndex = 2;
-            this.cbZenJiggle.Text = "Zen jiggle?";
+            this.cbZenJiggle.Text = "Zen?";
             this.cbZenJiggle.UseVisualStyleBackColor = true;
             this.cbZenJiggle.CheckedChanged += new System.EventHandler(this.cbZenJiggle_CheckedChanged);
             // 
@@ -91,8 +92,9 @@ namespace ArkaneSystems.MouseJiggle
             // nifMin
             // 
             this.nifMin.Icon = ((System.Drawing.Icon)(resources.GetObject("nifMin.Icon")));
-            this.nifMin.Text = "Mouse Jiggler";
+            this.nifMin.Text = "RunDesk";
             this.nifMin.DoubleClick += new System.EventHandler(this.nifMin_DoubleClick);
+            this.nifMin.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.nifMin_MouseDoubleClick);
             // 
             // trkTime
             // 
@@ -120,6 +122,14 @@ namespace ArkaneSystems.MouseJiggle
             this.lblTime.Text = "1s";
             this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(156, 24);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -131,12 +141,14 @@ namespace ArkaneSystems.MouseJiggle
             this.Controls.Add(this.cbZenJiggle);
             this.Controls.Add(this.cmdAbout);
             this.Controls.Add(this.cbEnabled);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
-            this.Text = "MouseJiggle";
+            this.Text = "RunDesk";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trkTime)).EndInit();
             this.ResumeLayout(false);
@@ -154,6 +166,7 @@ namespace ArkaneSystems.MouseJiggle
         private System.Windows.Forms.NotifyIcon nifMin;
         private System.Windows.Forms.TrackBar trkTime;
         private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
 

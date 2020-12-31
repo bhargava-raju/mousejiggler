@@ -9,10 +9,10 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ArkaneSystems.MouseJiggle</RootNamespace>
-    <AssemblyName>MouseJiggle</AssemblyName>
+    <AssemblyName>RunDesk</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <ApplicationIcon>Mouse %28ISO%29.ico</ApplicationIcon>
+    <ApplicationIcon>download.ico</ApplicationIcon>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
@@ -135,7 +135,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Mouse %28ISO%29.ico" />
+    <Content Include="download.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

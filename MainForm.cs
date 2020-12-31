@@ -24,7 +24,10 @@ namespace ArkaneSystems.MouseJiggle
 {
 	public partial class MainForm : Form
 	{
-		public MainForm() { InitializeComponent(); }
+		public MainForm() { 
+			InitializeComponent();
+			
+		}
 
 		protected bool Zig = true;
 
@@ -171,5 +174,30 @@ namespace ArkaneSystems.MouseJiggle
 
 			UpdateNotificationTrayText();
 		}
-	}
+
+		private void MainForm_Resize(object sender, EventArgs e)
+		{
+			//if the form is minimized  
+			//hide it from the task bar  
+			//and show the system tray icon (represented by the NotifyIcon control)  
+			if (this.WindowState == FormWindowState.Minimized)
+			{
+				Hide();
+				nifMin.Visible = true;
+			}
+		}
+
+		private void nifMin_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+			Show();
+			this.WindowState = FormWindowState.Normal;
+			nifMin.Visible = false;
+
+		}
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+			WindowState = FormWindowState.Minimized;
+		}
+    }
 }
